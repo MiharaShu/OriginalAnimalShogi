@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=src/DoubutuShogi.html">
+    <title>どうぶつ将棋 - 起動中...</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #1a1a2e;
+            font-family: 'Segoe UI', sans-serif;
+            color: #eee;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 5px solid rgba(255,255,255,0.15);
+            border-top-color: #e040fb;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        a { color: #e040fb; }
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+    <p>ゲームを読み込んでいます...</p>
+    <p style="font-size:13px; color:#888;">
+        自動で起動しない場合は
+        <a href="src/DoubutuShogi.html">こちらをクリック</a>
+    </p>
+</body>
+</html>

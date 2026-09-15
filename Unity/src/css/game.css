@@ -1,0 +1,250 @@
+/* --- Game Container --- */
+.game-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    min-height: 90vh;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+/* --- Side Panels --- */
+.side-panel {
+    min-width: 180px;
+    max-width: 250px;
+}
+
+/* --- Center Panel --- */
+.center-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Board --- */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(4, 110px);
+    gap: 3px;
+    background: #4e342e; /* より自然な木の色 */
+    border: 6px solid #3e2723;
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* 5行特殊盤面（真レベル5：ラストライオン） */
+.board.board-5rows {
+    background: linear-gradient(135deg, #1a0033, #2d004d, #1a0033);
+    border-color: #6a1b9a;
+    box-shadow: 0 0 30px rgba(106, 27, 154, 0.5), 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.cell {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(145deg, #ffecb3, #ffe082);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.15s ease;
+    border-radius: 2px;
+}
+
+.cell img {
+    width: 95px !important;
+    height: 95px !important;
+}
+
+.cell:hover {
+    background: linear-gradient(145deg, #fff8e1, #ffecb3);
+}
+
+.cell.selected {
+    background: linear-gradient(145deg, #a5d6a7, #81c784) !important;
+    box-shadow: inset 0 0 8px rgba(56, 142, 60, 0.5);
+}
+
+.cell.valid-move {
+    background: radial-gradient(circle, rgba(33, 150, 243, 0.4) 30%, transparent 70%), linear-gradient(145deg, #ffecb3, #ffe082);
+}
+
+.cell.valid-move::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(33, 150, 243, 0.5);
+    border-radius: 50%;
+}
+
+/* --- Player 2 Piece Flip --- */
+.player2-piece {
+    transform: rotate(180deg);
+}
+
+/* --- Hands --- */
+.hand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    min-height: 80px;
+    min-width: 90px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.hand-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #666;
+    text-align: center;
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+.hand-piece {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff9c4;
+    border: 2px solid #f9a825;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.hand-piece:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hand-piece.selected {
+    background: #a5d6a7 !important;
+    border-color: #388e3c !important;
+    box-shadow: 0 0 10px rgba(56, 142, 60, 0.4);
+}
+
+/* --- Turn Display --- */
+.turn-display {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.p1-color {
+    color: #1565c0;
+}
+
+.p2-color {
+    color: #c62828;
+}
+
+.ai-indicator {
+    color: #c62828;
+    animation: pulse-text 1s infinite;
+}
+
+/* --- Subtitle --- */
+.subtitle {
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+}
+
+/* --- Reset Button --- */
+.reset-btn {
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    /* 森テーマ：葉の緑 */
+    background-color: #689f38;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(104, 159, 56, 0.3);
+}
+
+.helper-icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+/* --- Board Message Overlay --- */
+#boardMessageOverlay {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 50;
+    text-align: center;
+    pointer-events: none;
+    white-space: nowrap;
+    animation: fadeIn 0.3s ease;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .main-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .side-panel {
+        flex-direction: row !important;
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .hand {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: auto;
+    }
+
+    .helpers-container {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

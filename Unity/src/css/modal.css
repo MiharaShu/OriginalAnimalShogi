@@ -1,0 +1,69 @@
+/* ===== カスタムモーダル ===== */
+#customModalOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 9000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    animation: fadeInOverlay 0.2s ease;
+}
+
+#customModalOverlay.active {
+    display: flex;
+}
+
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#customModalBox {
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 20px;
+    padding: 32px 36px;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
+    animation: modalPop 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-align: center;
+}
+
+@keyframes modalPop {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+#customModalTitle {
+    font-size: 22px;
+    font-weight: 800;
+    color: #2e3d23;
+    margin-bottom: 14px;
+}
+
+#customModalBody {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+#customModalClose {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 36px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(86, 171, 47, 0.35);
+}
+
+#customModalClose:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(86, 171, 47, 0.5);
+}

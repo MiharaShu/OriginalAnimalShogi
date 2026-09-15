@@ -1,0 +1,20 @@
+/* ===== どうぶつ将棋 - Stylesheet ===== */
+
+/* --- Global Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Meiryo', 'Yu Gothic', sans-serif;
+    /* 森の奥行きを感じさせるグラデーション（黄緑 -> 緑 -> 黄色） */
+    background: linear-gradient(135deg, #a8e063 0%, #56ab2f 50%, #fbc02d 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    color: #2e3d23;
+}

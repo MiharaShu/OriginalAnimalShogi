@@ -1,0 +1,87 @@
+.reset-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* --- Helper Buttons --- */
+.helpers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.helper-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.2s ease;
+    text-align: center;
+    line-height: 1.3;
+    position: relative;
+}
+
+.helper-btn:hover {
+    border-color: #8bc34a;
+    background: #f1f8e9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.helper-btn.used {
+    filter: grayscale(1) invert(0.1);
+    opacity: 0.4;
+    background: #e0e0e0 !important;
+    cursor: not-allowed;
+    text-decoration: line-through;
+    pointer-events: none;
+    border-color: #999 !important;
+}
+
+/* ===== ヘルパーボタン ツールチップ ===== */
+.helper-btn::after {
+    content: attr(data-tooltip);
+    display: block;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(30, 30, 30, 0.92);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 200;
+    line-height: 1.5;
+    max-width: 200px;
+    white-space: normal;
+    text-decoration: none;
+}
+
+.helper-btn:hover::after {
+    opacity: 1;
+}
+
+/* ===== ヘルパー操作ガイド表示 ===== */
+.helper-instruction {
+    font-size: 13px;
+    color: #e65100;
+    background: #fff3e0;
+    border: 1px solid #ffb74d;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-top: 6px;
+    animation: pulse-text 1.5s infinite;
+    text-align: center;
+}

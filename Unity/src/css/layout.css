@@ -1,0 +1,419 @@
+/* ===== Layout utilities extracted from inline styles ===== */
+
+/* --- Story Screen --- */
+.story-stage-title {
+    color: #9C27B0;
+    margin-bottom: 5px;
+}
+
+.story-enemy-name {
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.story-condition-area {
+    font-size: 16px;
+    color: #e65100;
+}
+
+/* --- Helper Selection Area --- */
+.helper-selection-area {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.helper-selection-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.helper-pool {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.helper-selection-status {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* --- Story Action Buttons --- */
+.story-buttons-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.story-action-btn {
+    background-color: #4CAF50;
+    width: auto;
+    font-size: 20px;
+}
+
+.story-alt-btn {
+    background-color: #2196F3;
+    width: auto;
+    font-size: 20px;
+}
+
+.story-back-btn {
+    background-color: #777;
+    width: auto;
+    font-size: 20px;
+}
+
+/* --- AI Level Screen --- */
+.ai-level-title {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.ai-level-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Game Screen Layout --- */
+.side-panel-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.center-panel-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-title {
+    margin: 0 0 5px 0;
+    font-size: 36px;
+}
+
+/* --- Endless Status Bar --- */
+.endless-status-bar {
+    display: none;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.endless-floor-label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.endless-hp-track {
+    width: 200px;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    margin: 5px auto;
+    overflow: hidden;
+}
+
+.endless-hp-fill {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f44336, #ffeb3b);
+    transition: width 0.3s;
+}
+
+/* --- Turn Display --- */
+.turn-display-main {
+    margin: 0 0 10px 0;
+}
+
+.turn-label-p2 {
+    display: none;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.turn-label-p1 {
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* --- Board Wrapper --- */
+.board-wrapper {
+    position: relative;
+}
+
+/* --- Game Buttons --- */
+.game-buttons-area {
+    margin-top: 20px;
+}
+
+.btn-back-to-title {
+    background-color: #2196F3;
+    margin-left: 10px;
+}
+
+/* --- Helpers Container --- */
+.helpers-panel {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* --- Message Board Overlay --- */
+.message-board {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 100;
+    text-align: center;
+    pointer-events: none;
+}
+
+/* --- Gacha Screen --- */
+.gacha-screen-inner {
+    max-width: 500px;
+}
+
+.gacha-title {
+    color: #e040fb;
+    margin-bottom: 5px;
+}
+
+.gacha-desc {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.gacha-result-display {
+    font-size: 70px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse-highlight 1s infinite;
+}
+
+.gacha-result-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.gacha-result-rarity {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.gacha-roll-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.gacha-roll-btn {
+    background: linear-gradient(135deg, #e040fb, #7c4dff);
+    color: white;
+    font-size: 22px;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(224,64,251,0.4);
+    transition: all 0.2s;
+}
+
+.gacha-next-btn {
+    display: none;
+    background-color: #4CAF50;
+    font-size: 18px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.gacha-rates-box {
+    margin-top: 20px;
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #888;
+}
+
+/* --- Encyclopedia Screen --- */
+.encyclopedia-screen-inner {
+    max-width: 800px;
+    height: 90vh;
+}
+
+.encyclopedia-title {
+    color: #2196F3;
+    margin-bottom: 10px;
+}
+
+.encyclopedia-layout {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.encyclopedia-list {
+    flex: 1;
+    overflow-y: auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.encyclopedia-detail {
+    flex: 2;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* --- Guide Screen --- */
+.guide-screen-inner {
+    max-width: 800px;
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.guide-title {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.guide-content {
+    text-align: left;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.guide-section-gacha {
+    color: #ff9800;
+    border-bottom: 2px solid #ff9800;
+    padding-bottom: 5px;
+}
+
+.guide-section-helper {
+    color: #2196F3;
+    border-bottom: 2px solid #2196F3;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.guide-rates-list {
+    font-size: 14px;
+    color: #555;
+    background: #f9f9f9;
+    padding: 10px 30px;
+    border-radius: 8px;
+}
+
+.guide-helper-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.guide-helper-table th {
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    padding: 10px;
+}
+
+.guide-helper-table td {
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.guide-helper-table .col-name {
+    width: 35%;
+}
+
+.guide-back-btn {
+    background-color: #777;
+    margin-top: 30px;
+}
+
+/* --- Modal Input --- */
+.modal-input {
+    display: none;
+    margin-bottom: 16px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.modal-buttons-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-submit-btn {
+    display: none;
+    background: linear-gradient(135deg, #2196F3, #1565c0);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 36px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* --- Dev Unlock --- */
+.dev-unlock-area {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dev-unlock-link {
+    font-size: 12px;
+    color: #aaa;
+    cursor: pointer;
+    text-decoration: underline;
+}

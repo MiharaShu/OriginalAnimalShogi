@@ -1,0 +1,80 @@
+/* --- Encyclopedia Styles --- */
+.piece-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.piece-card:hover {
+    background: #f1f8e9;
+    transform: translateX(5px);
+}
+
+.piece-card.active {
+    background: #e1f5fe;
+    border-color: #2196F3;
+}
+
+.piece-card img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.piece-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.detail-img {
+    width: 80px;
+    height: 80px;
+}
+
+.detail-title {
+    font-size: 28px;
+    color: #333;
+}
+
+.detail-desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.movement-preview-container {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.movement-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.movement-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
