@@ -287,5 +287,13 @@
         min-width: 0;
         width: 100%;
     }
+
+    .hand {
+        max-width: 100%;
+    }
+
+    .hand-label {
+        white-space: normal;
+    }
 }
 
