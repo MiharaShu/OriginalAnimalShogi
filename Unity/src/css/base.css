@@ -18,3 +18,23 @@ body {
     overflow-x: hidden;
     color: #2e3d23;
 }
+
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+.mode-card:focus-visible {
+    outline: 4px solid #0d47a1;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+

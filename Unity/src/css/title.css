@@ -159,7 +159,34 @@
     transition: all 0.2s ease;
 }
 
+@media (max-width: 480px) {
+    .title-screen {
+        padding: 22px 14px;
+    }
+
+    .title-title {
+        margin-bottom: 22px;
+        font-size: 34px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .modes-container {
+        gap: 14px;
+    }
+
+    .mode-card {
+        width: min(100%, 280px);
+        padding: 22px 16px;
+    }
+
+    .level-btn {
+        width: min(100%, 300px);
+    }
+}
+
 .mode-btn:hover {
     opacity: 0.9;
     transform: scale(1.02);
 }
+

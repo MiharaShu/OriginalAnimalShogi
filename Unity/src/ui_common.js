@@ -51,7 +51,7 @@ function showModal(body, title = '', onClose = null) {
     document.getElementById('customModalClose').focus();
 }
 
-/** テキスト入力付きモーダル（devUnlock 等向け）*/
+/** テキスト入力付きモーダル */
 function showPromptModal(title, placeholder, onSubmit) {
     const overlay = document.getElementById('customModalOverlay');
     document.getElementById('customModalTitle').innerHTML = title;
@@ -91,3 +91,4 @@ function submitModal() {
         cb(val);
     }
 }
+

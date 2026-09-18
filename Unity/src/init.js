@@ -148,8 +148,6 @@ function initGame() {
 
     render();
 
-    render();
-
     // --- Start BGM ---
     if (gameMode !== 'Tutorial' && typeof AudioEngine !== 'undefined' && typeof AudioEngine.playBGM === 'function') {
         AudioEngine.playBGM();
@@ -172,3 +170,4 @@ function initGame() {
 
 // --- Application Entry Point ---
 showTitleScreen();
+

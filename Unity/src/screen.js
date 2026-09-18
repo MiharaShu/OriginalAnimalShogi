@@ -65,13 +65,3 @@ function startTutorialMode() {
     runTutorialStep();
 }
 
-function devUnlock() {
-    showPromptModal('🔧 開発者用ロック解除', 'パスワードを入力…', (pwd) => {
-        if (pwd === 'shogi') {
-            document.querySelectorAll('.mode-card.locked').forEach(c => c.classList.remove('locked'));
-            showQuickNotice('🎉 すべてのモードが解放されました！');
-        } else if (pwd !== null && pwd !== '') {
-            showQuickNotice('❌ パスワードが違います。');
-        }
-    });
-}
